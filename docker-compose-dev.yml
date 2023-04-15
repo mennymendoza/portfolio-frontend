@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+    web:
+        image: nginx
+        container_name: pf-frontend
+        volumes:
+            - ./html:/usr/share/nginx/html
+            - ./conf.d:/etc/nginx/conf.d
+        ports:
+            - "127.0.0.1:80:80"
+        environment:
+            - NGINX_PORT=80
