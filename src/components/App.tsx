@@ -1,7 +1,6 @@
-import * as React from 'react';
 import Counter from './Counter';
 import Home from './Home';
-import { createBrowserRouter, RouterProvider, Link, BrowserRouter, Route, Routes, Outlet } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AboutMe from './AboutMe';
 import Experience from './Experience';
 import Research from './Research';

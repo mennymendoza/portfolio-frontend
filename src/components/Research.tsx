@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Banner from './Banner';
 import CardSet from './CardSet';
 import { TextBoxProps } from './TextBox';

@@ -1,4 +1,3 @@
-import * as React from 'react';
 
 export interface CardProps {
     imageSrc: string,

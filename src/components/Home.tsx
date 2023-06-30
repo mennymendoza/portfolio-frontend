@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Banner from './Banner';
 import CardSet from './CardSet';
 import { TextBoxProps } from './TextBox';
@@ -28,15 +28,15 @@ const homepageCards: CardProps[] = [
 
 export default function Home() {
 
-    const [textTitle, setTextTitle] = React.useState("");
+    const [textTitle, setTextTitle] = useState("");
 
     const textBoxContent: TextBoxProps = {
         textTitle: textTitle
     };
 
-    let bannerText = "This portfolio is hosted with Kestral using an nginx proxy.";
+    const bannerText = "This portfolio is hosted with Kestral using an nginx proxy.";
 
-    React.useEffect(() => {
+    useEffect(() => {
         writeText(bannerText, setTextTitle, 70)
     }, []);
 

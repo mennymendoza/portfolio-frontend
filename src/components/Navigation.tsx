@@ -1,4 +1,3 @@
-import * as React from 'react';
 import InfoIcon from '@mui/icons-material/Info';
 import MoreTimeIcon from '@mui/icons-material/MoreTime';
 import BiotechIcon from '@mui/icons-material/Biotech';

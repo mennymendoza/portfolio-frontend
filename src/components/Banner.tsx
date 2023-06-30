@@ -1,4 +1,3 @@
-import * as React from 'react';
 import TextBox from './TextBox';
 import { TextBoxProps } from './TextBox';
 
