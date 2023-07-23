@@ -1,0 +1,390 @@
+/* Top Level Rules */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 200;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin: 40px 0px;
+}
+
+body {
+    width: 100%;
+}
+
+#root {
+    width: 100%;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* General Rules */
+
+header, section, footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+img {
+    max-width: 700px;
+}
+
+.inner-section {
+    min-width: 960px;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Specific Rules */
+
+header {
+    padding: 20px 0px;
+    background-color: black;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.icon {
+    font-weight: 100;
+    padding: 10px;
+    color: white;
+}
+
+.menu-link {
+    color: black;
+    padding: 10px 5px;
+    height: 90%;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+/* Text Box Specific Rules */
+
+.text-box h1 {
+    font-weight: 200;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.text-box p, .text-box a {
+    line-height: 46px;
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+/* Banner Specific Rules */
+
+.banner {
+    background-color: black;
+    padding: 150px 0px;
+}
+
+.banner .text-box {
+    width: 45%;
+}
+
+.banner img {
+    color: white;
+    width: 45%;
+}
+
+.banner.reverse {
+    background-color: white;
+}
+
+.banner.reverse h1, .banner.reverse p, .banner.reverse a {
+    color: black;
+}
+
+.banner.reverse .inner-section {
+    flex-direction: row-reverse;
+}
+
+/* Title Banner Specific Rules */
+
+.title-banner {
+    height: 644px;
+    z-index: -2;
+}
+
+.stripe-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 45%;
+}
+
+.stripe {
+    width: 50px;
+    height: 764px;
+    margin: 0px 10px;
+    position: relative;
+    transform: rotate(10deg);
+    z-index: -1;
+    background-color: white;
+}
+
+.title-banner.reverse .inner-section {
+    flex-direction: row-reverse;
+}
+
+.title-banner.reverse .stripe {
+    transform: rotate(-10deg);
+}
+
+/* Card Set Specific Rules */
+
+.card-set {
+    padding: 170px 0px;
+    background-color: white;
+}
+
+.card-set .inner-section {
+    align-items: flex-start;
+}
+
+.card {
+    width: 30%;
+    height: 70%;
+}
+
+.card h2, .card p, .card a {
+    line-height: 46px;
+    color: black;
+    font-weight: 300;
+}
+
+.card h2 {
+    margin: 20px 0px 10px 0px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.card p, .card a {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+/* Footer Specific Rules */
+
+footer {
+    background-color: black;
+    padding: 70px 0px;
+}
+
+footer h2, .contacts {
+    font-weight: 100;
+    color: white;
+}
+
+footer h2 {
+    font-size: 37px;
+    margin-bottom: 20px;
+}
+
+.footer-info {
+    color: white;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.separator {
+    height: 1px;
+    width: 40%;
+    background-color: white;
+    margin: 20px 0px;
+}
+
+.nav-link {
+    color: white;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 90%;
+    font-weight: 200;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    transition-duration: 0.08s;
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 960px) {
+
+    /* General Changes */
+    .inner-section, .banner.reverse .inner-section {
+        min-width: 0px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        align-self: center;
+    }
+
+    #header-div {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 6%;
+    }
+
+    .text-box, .banner img, .card {
+        width: 70% !important;
+    }
+
+    h1 {
+        font-size: 1.9rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+        margin: 10px 0px !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+
+    /* Header Rules */
+
+    .icon {
+        margin: 20px 0px;
+    }
+
+    /* Footer Rules */
+
+    .separator {
+        display: none;
+    }
+
+    .footer-info {
+        display: none;
+    }
+
+    .column-1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link li {
+        align-self: center;
+    }
+
+    /* Text Box Rules */
+
+    .text-box {
+        margin-bottom: 40px;
+    }
+
+    /* Card Set Rules */
+
+    .card {
+        margin-bottom: 40px;
+    }
+
+    .card img {
+        max-height: 250px;
+    }
+
+    /* Banner Rules */
+    .banner {
+        padding: 70px 0px;
+    }
+
+    /* Title Banner Rules */
+
+    .title-banner {
+        height: 500px;
+    }
+
+    .stripe-container {
+        display: none;
+    }
+}
+
+/* BMD Banner Rules */
+
+#bmd-banner {
+    background-color: #232B37;
+}
+
+#bmd-banner .stripe {
+    background-color: #DEAC6B;
+}
+
+#bmd-banner h1 {
+    font-weight: 700;
+    font-size: 75px;
+}
+
+/* BMD Card Set Rules */
+
+/* #bmd-cardset {
+    height: 1025px;
+} */
+
+#bmd-cardset .card {
+    width: 45%;
+}
+
+#bmd-cardset img {
+    height: 400px;
+}
+
+/* FS Student Housing Banner */
+
+#fs-housing-banner {
+    background-color: #142443;
+}
+
+#fs-housing-banner .stripe {
+    background-color: #A81126;
+}
+
+#fs-housing-banner h1 {
+    font-weight: 900;
+    font-size: 75px;
+    line-height: 170%;
+}

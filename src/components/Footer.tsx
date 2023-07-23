@@ -1,4 +1,3 @@
-import Navigation from './Navigation';
 
 export default function Footer() {
     return (
@@ -13,7 +12,6 @@ export default function Footer() {
                     <div className="separator"></div>
                     <p className="footer-info">Email: Juanmendoza97@mail.fresnostate.edu</p>
                 </div>
-                <Navigation />
             </div>
         </footer>
     );
