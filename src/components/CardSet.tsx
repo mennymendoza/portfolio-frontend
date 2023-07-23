@@ -1,18 +1,18 @@
-import Card from './Card';
-import { CardProps } from './Card';
+import { ReactNode } from 'react';
 
 export interface CardSetProps {
-    id?: string,
-    cards: CardProps[],
+    id: string,
+    children: ReactNode
 }
 
 export default function CardSet (props: CardSetProps) {
-    const { id, cards } = props;
+
+    const { id, children } = props;
 
     return (
         <section id={id} className="card-set">
             <div className="inner-section">
-                {cards.map((obj: CardProps) => <Card key={obj.cardTitle} {...obj} />)}
+                {children}
             </div>
         </section>
     );
