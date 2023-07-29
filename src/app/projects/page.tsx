@@ -2,7 +2,7 @@ import Banner from '../../components/Banner';
 
 const portfolioBanner = {
     textTitle: "Portfolio",
-    textContent: "This portfolio was built with React and transpiled to JavaScript with webpack. I used the ASP.NET Core web framework in C# to build the backend.",
+    textContent: "This portfolio is built using React and Next.js and deployed using Docker. I'm using a Digital Ocean Droplet for web hosting.",
 };
 
 const gomokuBanner = {
